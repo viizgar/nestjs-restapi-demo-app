@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "name": "Katsu",
+    "age": 1,
+    "breed": "Shiba-inu",
+    "sex": "male",
+    "personality": ["Playful", "Energetic"]
+  },
+  {
+    "id": "2",
+    "name": "Sira",
+    "age": 1,
+    "breed": "Mixed",
+    "sex": "female",
+    "personality": ["Affectionate", "Rough"]
+  },
+  {
+    "id": "3",
+    "name": "Crash",
+    "age": 15,
+    "breed": "Mixed",
+    "sex": "male",
+    "personality": ["Loyal", "Anxious"]
+  },
+  {
+    "id": "4",
+    "name": "Meisha",
+    "age": 5,
+    "sex": "female",
+    "breed": "Australian Shepherd",
+    "personality": ["Anxious", "Child_friendly"]
+  }
+]
