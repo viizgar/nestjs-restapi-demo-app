@@ -26,14 +26,16 @@ export class DogsService {
   }
 
   update(id: string, updateDogDto: UpdateDogDto) {
+    let updog;
     this.dogs = this.dogs.map((dog: Dog) => {
       if (dog.id === id) {
-        return { ...updateDogDto } as Dog;
+        updog = { ...dog, ...updateDogDto } as Dog;
+        return updog;
       } else {
         return dog;
       }
     });
-    return updateDogDto;
+    return updog;
   }
 
   remove(id: string) {
