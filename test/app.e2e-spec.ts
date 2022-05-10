@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
-import * as request from 'supertest';
+import request from 'supertest';
 import { AppModule } from './../src/app.module';
 
 describe('AppController (e2e)', () => {
@@ -20,5 +20,17 @@ describe('AppController (e2e)', () => {
       .get('/')
       .expect(200)
       .expect('Hello World!');
+  });
+
+  it('/dogs (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/dogs')
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .then((res) => {
+        expect(res.body).toBeInstanceOf(Array);
+        expect(res.body[0]).toHaveProperty('breed');
+        expect(res.body[0]).toHaveProperty('name');
+      });
   });
 });

@@ -13,8 +13,9 @@ export class DogsService {
   }
 
   create(createDogDto: CreateDogDto) {
-    this.dogs.push({ id: 'id-' + Math.random(), ...createDogDto });
-    return createDogDto;
+    const createdDog: Dog = { id: 'id-' + Math.random(), ...createDogDto };
+    this.dogs.push(createdDog);
+    return createdDog;
   }
 
   findAll() {
